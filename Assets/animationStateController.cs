@@ -5,7 +5,6 @@ using UnityEngine;
 public class animationStateController : MonoBehaviour
 {
     Animator animator;
-    //CharacterController characterController;
     int isWalkingHash;
     int isRunningHash;
     public float speed;
@@ -15,8 +14,6 @@ public class animationStateController : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        //characterController = GetComponent<CharacterController>();
-
         //increases performance
         isWalkingHash = Animator.StringToHash("isWalking");
         isRunningHash = Animator.StringToHash("isRunning");
@@ -25,25 +22,7 @@ public class animationStateController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
-        //taking in the horizontal and vertical axis input
-        float horizontalInput = Input.GetAxis("Horizontal");
-        float verticalInput = Input.GetAxis("Vertical");
-        //determines the direction of movement along the x and y axis
-        Vector3 movementDirection = new Vector3(horizontalInput, 0, verticalInput);
-        float magnitude = Mathf.Clamp01(movementDirection.magnitude) * speed;
-        movementDirection.Normalize();
-
-        characterController.SimpleMove(movementDirection * magnitude);
-
-        if (movementDirection != Vector3.zero)
-        {
-            Quaternion toRotation = Quaternion.LookRotation(movementDirection, Vector3.up);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
-        }
-        */
-
-
+       
 
         bool isWalking = animator.GetBool(isWalkingHash);
         bool isRunning = animator.GetBool(isRunningHash);
