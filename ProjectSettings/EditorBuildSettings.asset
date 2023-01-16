@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/TropicalEnvironment_LITE/Scenes/MainMenu.unity
     guid: 51af7a09b6166bc48a1494ea52dceb3a
+  - enabled: 1
+    path: Assets/TropicalEnvironment_LITE/Scenes/Game.unity
+    guid: 9c63f33617853404eb84883617221486
   m_configObjects: {}
